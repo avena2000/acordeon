@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/705d8d055f.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Acordeon</title>
+</head>
+<body>
+<section>
+    <div class="container" style="max-width: 1200px;">
+        <div class="acordeon-container">
+            <h1>Frequently Asked Questions</h1>
+            <div class="acordeon">
+                <div class="contenedor-pregunta">
+                    <div class="pregunta">
+                        <i class="fa-solid fa-plus"></i>
+                        <h3>Do you provide any scripts with your templates?</h3>
+                    </div>
+                    <div class="respuesta">
+                        <p>Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are inactive. Basic scripts can be easily added at www.zemez.io If you are not sure that the element you’re interested in is active please contact our Support Chat for clarification.</p>
+                    </div>
+                </div>
+                <div class="contenedor-pregunta">
+                    <div class="pregunta">
+                        <i class="fa-solid fa-plus"></i>
+                        <h3>What do I receive when I order a template?</h3>
+                    </div>
+                    <div class="respuesta">
+                        <p>After you complete the payment via our secure form you will receive the instructions for
+                            downloading the product. The source files in the download package can vary based on the type
+                            of the product you have purchased.</p>
+                    </div>
+                </div>
+                <div class="contenedor-pregunta">
+                    <div class="pregunta">
+                        <i class="fa-solid fa-plus"></i>
+                        <h3>In what formats are your templates available?</h3>
+                    </div>
+                    <div class="respuesta">
+                        <p>Website templates are available in Photoshop and HTML formats. Fonts are included with the
+                            Photoshop file. In most templates, HTML is compatible with Adobe® Dreamweaver® and
+                            Microsoft® FrontPage®.</p>
+                    </div>
+                </div>
+                <div class="contenedor-pregunta last">
+                    <div class="pregunta">
+                        <i class="fa-solid fa-plus"></i>
+                        <h3>What am I allowed to do with the templates?</h3>
+                    </div>
+                    <div class="respuesta">
+                        <p>You may build a website using the template in any way you like. You may not resell or
+                            redistribute templates (like we do); claim intellectual or exclusive ownership to any of our
+                            products, modified or unmodified. All products are property of content providing companies
+                            and individuals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <h1>Skills</h1>
+            <div class="brand">
+                <h2>Branding</h2>
+                <p>90%</p>
+            </div>
+            <div class="barra"><div class="color" style="width: 90%; background-color: red"></div></div>
+            <div class="brand">
+                <h2>Branding</h2>
+                <p>50%</p>
+            </div>
+            <div class="barra"><div class="color" style="width: 50% ; background-color: green"></div></div>
+            <div class="brand">
+                <h2>Branding</h2>
+                <p>70%</p>
+            </div>
+            <div class="barra"><div class="color" style="width: 70%; background-color: yellow"></div></div>
+            <div class="brand">
+                <h2>Branding</h2>
+                <p>30%</p>
+            </div>
+            <div class="barra"><div class="color" style="width: 30%; background-color: darkblue"></div></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(".pregunta").click(function () {
+        const $icon = $(this).children("i");
+        const $respuesta = $(this).next(".respuesta");
+
+        // Oculta todas las respuestas y restaura los iconos
+        $(".respuesta").not($respuesta).slideUp();
+        $(".pregunta i").not($icon).removeClass("fa-minus").addClass("fa-plus");
+
+        // Alterna la respuesta y el icono solo en el elemento clicado
+        $respuesta.slideToggle();
+        $icon.toggleClass("fa-plus fa-minus");
+    })
+</script>
+
+</body>
+</html>
