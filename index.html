@@ -87,16 +87,19 @@
 
 <script>
     $(".pregunta").click(function () {
+        const $pregunta = $(this).children("h3");
         const $icon = $(this).children("i");
         const $respuesta = $(this).next(".respuesta");
 
         // Oculta todas las respuestas y restaura los iconos
         $(".respuesta").not($respuesta).slideUp();
+        $(".pregunta h3").not($pregunta).removeClass("azul");
         $(".pregunta i").not($icon).removeClass("fa-minus").addClass("fa-plus");
 
         // Alterna la respuesta y el icono solo en el elemento clicado
         $respuesta.slideToggle();
         $icon.toggleClass("fa-plus fa-minus");
+        $pregunta.toggleClass("azul")
     })
 </script>
 

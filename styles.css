@@ -76,6 +76,7 @@ h1 {
     padding-bottom: 25px;
 }
 h3 {
+    transition: 500ms all;
     font-size: 20px;
     font-weight: normal;
 }
@@ -105,4 +106,7 @@ h2 {
     font-size: 18px;
     font-weight: normal;
     text-align: start;
+}
+.azul {
+    color:#2937ee;
 }
